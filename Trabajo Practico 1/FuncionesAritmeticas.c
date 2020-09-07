@@ -11,10 +11,10 @@
         int producto;
         producto=factor1*factor2;
         return producto;}
-    float Division(int dividendo,int divisor){
+    float Division(float dividendo,float divisor){
         if(divisor==0){
         printf("No se puede dividir por 0. Elija otro valor:");
-        scanf("%d",&divisor);}
-        int cociente;
-        cociente=(float)dividendo/divisor;
+        scanf("%f",&divisor);}
+        float cociente;
+        cociente=dividendo/divisor;
         return cociente;}
