@@ -34,10 +34,8 @@ int main(){
  int segundoOperando;
  int opcion1;
  int opcion2;
- int opcion3;
  opcion1=0;
  opcion2=0;
- opcion3=0;
  continuar='s';
 
 
@@ -59,45 +57,47 @@ do
         switch(opcion)
         {
             case 1:
-                opcion1=1;
                 primerOperando=ObtengoNumero();
-                system("cls");
+                opcion1=1;
 
                 printf("1. Ingrese el 1er operando:%d\n",primerOperando);
+                printf("2. Ingresar 2do operando:\n");
+                printf("3. Calcular todas las operaciones: \n");
                 break;
             case 2:
                 if(opcion1==1){
-                        opcion2=1;
                 segundoOperando=ObtengoNumero();
-                system("cls");
+                opcion2=1;
+
                 printf("1. Ingrese el 1er operando:%d\n",primerOperando);
-                printf("2. Ingrese el 2do operando:%d\n",segundoOperando);}
+                printf("2. Ingrese el 2do operando:%d\n",segundoOperando);
+                printf("3. Calcular todas las operaciones: \n");}
 
                 else {
                         printf("\nDeberias haber ingresado el primer operando\n");}
                         break;
             case 3:
                 if(opcion1==1 && opcion2==1){
-                    printf("\nHaciendo las operaciones! En breve sus resultados!");}
+                    printf("\nHaciendo las operaciones!");}
                 else{
-                    printf("\nImposible hacer los calculos ya que falta ingresar operandos!\n")}
+                    printf("\nImposible hacer los calculos ya que falta ingresar operandos!\n");}
                     break;
             case 4:
-                system("cls");
+
                 printf("Eligio opcion 4. Los resultados son los siguientes:\n");
                 printf("   a) Resultado de la suma de los operandos es: %d\n", Suma(primerOperando, segundoOperando));
                 printf("   b) Resultado de la resta de los operandos es: %d\n", Resta(primerOperando, segundoOperando));
                 printf("   c) El cociente de la division es: %f\n", Division(primerOperando, segundoOperando));
-                printf("   d) El producto de la multiplicación es: %d\n", Multiplicacion(primerOperando, segundoOperando));
+                printf("   d) El producto de la multiplicacion es: %d\n", Multiplicacion(primerOperando, segundoOperando));
                 printf("   e) El factorial del primer operando es: %lld\n", Factorial(primerOperando));
                 break;
             case 5:
-
+                printf("\nGracias por usar el programa! Hasta luego!");
+                continuar='t';
                 break;
             default:
-                printf("\nElija una opcion valida\n");
-        }
-
+                printf("\nElija una opcion valida\n");}
+              system("pause");
 
     }while(continuar=='s');
     return 0;

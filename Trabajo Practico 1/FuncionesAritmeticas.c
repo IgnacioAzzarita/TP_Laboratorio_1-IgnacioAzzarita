@@ -3,7 +3,6 @@
      int numero;
      printf("Ingrese el numero deseado");
      scanf("%d",&numero);}
-
  int Suma(int numero1,int numero2){
         int resultado;
         resultado=numero1+numero2;
@@ -23,3 +22,11 @@
         float cociente;
         cociente=dividendo/divisor;
         return cociente;}
+long long int Factorial(int primerOperando){
+    long long int resultado;
+    int i;
+    resultado= 1;
+    for(i = 1; i <= primerOperando; i++){
+        resultado *= i;}
+    return resultado;
+}
