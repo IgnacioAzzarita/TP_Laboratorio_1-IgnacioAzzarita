@@ -62,46 +62,34 @@ do
                 opcion1=1;
                 primerOperando=ObtengoNumero();
                 system("cls");
-                printf("------------Menú de opciones------------");
-                printf("1. Ingrese el 1er operando:%d\n",primerOperando);
-                printf("2. Ingrese el 2do operando:\n");
-                printf("3. Calcular todas las operaciones: \n");
-                printf("   a) Calcular la suma (primerOperando+segundoOperando)\n");
-                printf("   b) Calcular la resta (primerOperando-segundoOperando)\n");
-                printf("   c) Calcular la division (primerOperando/segundoOperando)\n");
-                printf("   d) Calcular la multiplicacion (primerOperando*segundoOperando)\n");
-                printf("   e) Calcular el factorial (primerOperando!)\n");
-                printf("4. Informar resultados\n");
-                printf("5. Salir\n\n");
 
+                printf("1. Ingrese el 1er operando:%d\n",primerOperando);
                 break;
             case 2:
                 if(opcion1==1){
                         opcion2=1;
                 segundoOperando=ObtengoNumero();
                 system("cls");
-                printf("------------Menú de opciones------------");
                 printf("1. Ingrese el 1er operando:%d\n",primerOperando);
-                printf("2. Ingrese el 2do operando:%d\n",segundoOperando);
-                printf("3. Calcular todas las operaciones: \n");
-                printf("   a) Calcular la suma (primerOperando+segundoOperando)\n");
-                printf("   b) Calcular la resta (primerOperando-segundoOperando)\n");
-                printf("   c) Calcular la division (primerOperando/segundoOperando)\n");
-                printf("   d) Calcular la multiplicacion (primerOperando*segundoOperando)\n");
-                printf("   e) Calcular el factorial (primerOperando!)\n");
-                printf("4. Informar resultados\n");
-                printf("5. Salir\n\n");}
+                printf("2. Ingrese el 2do operando:%d\n",segundoOperando);}
 
                 else {
-                        printf("\nDeberias haber ingresado el primer operando\n");
-                }
-
-            break;
+                        printf("\nDeberias haber ingresado el primer operando\n");}
+                        break;
             case 3:
-
-            break;
+                if(opcion1==1 && opcion2==1){
+                    printf("\nHaciendo las operaciones! En breve sus resultados!");}
+                else{
+                    printf("\nImposible hacer los calculos ya que falta ingresar operandos!\n")}
+                    break;
             case 4:
-
+                system("cls");
+                printf("Eligio opcion 4. Los resultados son los siguientes:\n");
+                printf("   a) Resultado de la suma de los operandos es: %d\n", Suma(primerOperando, segundoOperando));
+                printf("   b) Resultado de la resta de los operandos es: %d\n", Resta(primerOperando, segundoOperando));
+                printf("   c) El cociente de la division es: %f\n", Division(primerOperando, segundoOperando));
+                printf("   d) El producto de la multiplicación es: %d\n", Multiplicacion(primerOperando, segundoOperando));
+                printf("   e) El factorial del primer operando es: %lld\n", Factorial(primerOperando));
                 break;
             case 5:
 
