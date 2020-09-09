@@ -28,55 +28,93 @@ que contenga las funciones para realizar las cinco operaciones.
 
 
 int main(){
+ char continuar;
  int opcion;
- int primerNumero;
- int segundoNumero;
- int resultadoSuma;
- int resultadoResta;
- int producto;
- float cociente;
+ int primerOperando;
+ int segundoOperando;
+ int opcion1;
+ int opcion2;
+ int opcion3;
+ opcion1=0;
+ opcion2=0;
+ opcion3=0;
+ continuar='s';
 
 
-
+    printf("------------Menú de opciones------------");
+    printf("\n1. Ingresar 1er operando:\n");
+    printf("2. Ingresar 2do operando:\n");
+    printf("3. Calcular todas las operaciones: \n");
+    printf("   a) Calcular la suma (primerOperando+segundoOperando)\n");
+    printf("   b) Calcular la resta (primerOperando-segundoOperando)\n");
+    printf("   c) Calcular la division (primerOperando/segundoOperando)\n");
+    printf("   d) Calcular la multiplicacion (primerOperando*segundoOperando)\n");
+    printf("   e) Calcular el factorial (primerOperando!)\n");
+    printf("4. Informar resultados\n");
+    printf("5. Salir\n\n");
 do
     {
-        printf("1. Sumar\ 2.Restar\ 3.Multiplicar\ 4.Dividir\ 5.Factorial\ 6.Salir\n");
-        printf("Elija una opcion: ");
-        scanf("%d", &opcion);
-        if(opcion!=6){
-        primerNumero= printf("Ingrese el primer numero:");
-        scanf("%d",&primerNumero);
-        segundoNumero=printf("Ingrese segundo numero:");
-        scanf("%d",&segundoNumero);}
+    printf("Ingrese la opcion deseada");
+    scanf("%d",&opcion);
         switch(opcion)
         {
             case 1:
-                resultadoSuma=Suma(primerNumero,segundoNumero);
-                printf("\nEl resultado de la suma es: %d\n",resultadoSuma);
-            break;
+                opcion1=1;
+                primerOperando=ObtengoNumero();
+                system("cls");
+                printf("------------Menú de opciones------------");
+                printf("1. Ingrese el 1er operando:%d\n",primerOperando);
+                printf("2. Ingrese el 2do operando:\n");
+                printf("3. Calcular todas las operaciones: \n");
+                printf("   a) Calcular la suma (primerOperando+segundoOperando)\n");
+                printf("   b) Calcular la resta (primerOperando-segundoOperando)\n");
+                printf("   c) Calcular la division (primerOperando/segundoOperando)\n");
+                printf("   d) Calcular la multiplicacion (primerOperando*segundoOperando)\n");
+                printf("   e) Calcular el factorial (primerOperando!)\n");
+                printf("4. Informar resultados\n");
+                printf("5. Salir\n\n");
+
+                break;
             case 2:
-                resultadoResta=Resta(primerNumero,segundoNumero);
-                printf("El resultado de la resta es: %d\n",resultadoResta);
+                if(opcion1==1){
+                        opcion2=1;
+                segundoOperando=ObtengoNumero();
+                system("cls");
+                printf("------------Menú de opciones------------");
+                printf("1. Ingrese el 1er operando:%d\n",primerOperando);
+                printf("2. Ingrese el 2do operando:%d\n",segundoOperando);
+                printf("3. Calcular todas las operaciones: \n");
+                printf("   a) Calcular la suma (primerOperando+segundoOperando)\n");
+                printf("   b) Calcular la resta (primerOperando-segundoOperando)\n");
+                printf("   c) Calcular la division (primerOperando/segundoOperando)\n");
+                printf("   d) Calcular la multiplicacion (primerOperando*segundoOperando)\n");
+                printf("   e) Calcular el factorial (primerOperando!)\n");
+                printf("4. Informar resultados\n");
+                printf("5. Salir\n\n");}
+
+                else {
+                        printf("\nDeberias haber ingresado el primer operando\n");
+                }
+
             break;
             case 3:
-                producto=Multiplicacion(primerNumero,segundoNumero);
-                printf("\nEl producto de la multiplicacion es: %d\n",producto);
+
             break;
             case 4:
-                cociente=Division(primerNumero,segundoNumero);
-                printf("\nEl cociente de la division es: %f\n",cociente);
+
                 break;
             case 5:
-                printf("\nEl resultado del factorial es: \n");
+
                 break;
-            case 6:
-                printf("\nGracias por elegir mi calculadora :) \n");
-            break;
-            return 0;
+            default:
+                printf("\nElija una opcion valida\n");
         }
 
 
-    }while(opcion!=6);}
+    }while(continuar=='s');
+    return 0;
+    }
+
 
 
 
