@@ -22,9 +22,13 @@ que contenga las funciones para realizar las cinco operaciones.
 (donde dice “x” e “y” en el ejemplo, se debe mostrar el número cargado)
 • Deberán contemplarse los casos de error (división por cero, etc)
 • Documentar todas las funciones*/
+
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
+#include <conio.h>
 #include "FuncionesAritmeticas.h"
+
 
 
 int main(){
@@ -34,12 +38,20 @@ int main(){
  int segundoOperando;
  int opcion1;
  int opcion2;
+ int opcion3;
+ int suma;
+ int resta;
+ int producto;
+ float cociente;
+float factor;
  opcion1=0;
  opcion2=0;
+ opcion3=0;
+
  continuar='s';
 
 
-    printf("------------Menú de opciones------------");
+          printf("------------Menu de opciones------------");
     printf("\n1. Ingresar 1er operando:\n");
     printf("2. Ingresar 2do operando:\n");
     printf("3. Calcular todas las operaciones: \n");
@@ -50,49 +62,53 @@ int main(){
     printf("   e) Calcular el factorial (primerOperando!)\n");
     printf("4. Informar resultados\n");
     printf("5. Salir\n\n");
+
 do
     {
-    printf("Ingrese la opcion deseada");
-    scanf("%d",&opcion);
+         system("pause");
+         printf("Ingrese la opcion deseada");
+         scanf("%d",&opcion);
         switch(opcion)
         {
             case 1:
                 primerOperando=ObtengoNumero();
                 opcion1=1;
-
-                printf("1. Ingrese el 1er operando:%d\n",primerOperando);
-                printf("2. Ingresar 2do operando:\n");
-                printf("3. Calcular todas las operaciones: \n");
                 break;
             case 2:
                 if(opcion1==1){
                 segundoOperando=ObtengoNumero();
                 opcion2=1;
-
-                printf("1. Ingrese el 1er operando:%d\n",primerOperando);
-                printf("2. Ingrese el 2do operando:%d\n",segundoOperando);
-                printf("3. Calcular todas las operaciones: \n");}
-
+                scanf("%d",&segundoOperando);}
                 else {
                         printf("\nDeberias haber ingresado el primer operando\n");}
                         break;
             case 3:
                 if(opcion1==1 && opcion2==1){
-                    printf("\nHaciendo las operaciones!");}
+                opcion3=1;
+                printf("\nHaciendo las operaciones!\n");
+                suma=Suma(primerOperando,segundoOperando);
+                resta=Resta(primerOperando,segundoOperando);
+                producto=Multiplicacion(primerOperando,segundoOperando);
+                cociente=Division(primerOperando,segundoOperando);
+                factor=Factorial(primerOperando);}
                 else{
                     printf("\nImposible hacer los calculos ya que falta ingresar operandos!\n");}
                     break;
+                    system("pause");
             case 4:
-
+                if(opcion3==1){
                 printf("Eligio opcion 4. Los resultados son los siguientes:\n");
-                printf("   a) Resultado de la suma de los operandos es: %d\n", Suma(primerOperando, segundoOperando));
-                printf("   b) Resultado de la resta de los operandos es: %d\n", Resta(primerOperando, segundoOperando));
-                printf("   c) El cociente de la division es: %f\n", Division(primerOperando, segundoOperando));
-                printf("   d) El producto de la multiplicacion es: %d\n", Multiplicacion(primerOperando, segundoOperando));
-                printf("   e) El factorial del primer operando es: %lld\n", Factorial(primerOperando));
+                printf("   a) Resultado de la suma de los operandos es: %d\n", suma);
+                printf("   b) Resultado de la resta de los operandos es: %d\n", resta);
+                printf("   c) El cociente de la division es: %f\n", cociente);
+                printf("   d) El producto de la multiplicacion es: %d\n", producto);
+                printf("   e) El factorial del primer operando es: %f\n", factor);}
+                else{
+                    printf("No ha seleccionado la opcion para hacer los calculos");}
                 break;
+                system("pause");
             case 5:
-                printf("\nGracias por usar el programa! Hasta luego!");
+                printf("\nGracias por usar el programa! Hasta luego!\n");
                 continuar='t';
                 break;
             default:

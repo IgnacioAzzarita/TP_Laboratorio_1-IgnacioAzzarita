@@ -22,9 +22,9 @@
         float cociente;
         cociente=dividendo/divisor;
         return cociente;}
-long long int Factorial(int primerOperando){
-    long long int resultado;
-    int i;
+float Factorial(int primerOperando){
+    float resultado;
+    float i;
     resultado= 1;
     for(i = 1; i <= primerOperando; i++){
         resultado *= i;}

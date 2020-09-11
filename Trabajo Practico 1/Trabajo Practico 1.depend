@@ -9,3 +9,15 @@
 1599682425 source:c:\users\belial\desktop\capeta gid\trabajo-practico-1---ignacio-azzarita\trabajo practico 1\funcionesaritmeticas.c
 	"FuncionesAritmeticas.h"
 
+1599859706 source:c:\users\belial\desktop\capeta gid\tp_laboratorio_1-ignacioazzarita\trabajo practico 1\funcionesaritmeticas.c
+	"FuncionesAritmeticas.h"
+
+1599859706 c:\users\belial\desktop\capeta gid\tp_laboratorio_1-ignacioazzarita\trabajo practico 1\funcionesaritmeticas.h
+
+1599860522 source:c:\users\belial\desktop\capeta gid\tp_laboratorio_1-ignacioazzarita\trabajo practico 1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<conio.h>
+	"FuncionesAritmeticas.h"
+
