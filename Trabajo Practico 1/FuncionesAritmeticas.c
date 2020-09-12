@@ -1,19 +1,19 @@
 #include "FuncionesAritmeticas.h"
- int ObtengoNumero(){
-     int numero;
+ float ObtengoNumero(){
+     float numero;
      printf("Ingrese el numero deseado");
-     scanf("%d",&numero);
+     scanf("%f",&numero);
      return numero;}
- int Suma(int numero1,int numero2){
-        int resultado;
+ float Suma(float numero1,float numero2){
+        float resultado;
         resultado=numero1+numero2;
         return resultado;}
-    int Resta(int numero1, int numero2){
-        int resultado;
+    float Resta(float numero1, float numero2){
+        float resultado;
         resultado=numero1-numero2;
         return resultado;}
-    int Multiplicacion(int factor1,int factor2){
-        int producto;
+    double Multiplicacion(float factor1,float factor2){
+        double producto;
         producto=factor1*factor2;
         return producto;}
     float Division(float dividendo,float divisor){
@@ -30,3 +30,5 @@ long long int Factorial(long long int primerOperando){
         resultado *= i;}
     return resultado;
 }
+
+

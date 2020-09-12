@@ -34,14 +34,14 @@ que contenga las funciones para realizar las cinco operaciones.
 int main(){
  char continuar;
  int opcion;
- int primerOperando;
- int segundoOperando;
+ float primerOperando;
+ float segundoOperando;
  int opcion1;
  int opcion2;
  int opcion3;
- int suma;
- int resta;
- int producto;
+ float suma;
+ float resta;
+ double producto;
  float cociente;
  long long int factor;
  long long int factor2;
@@ -99,10 +99,10 @@ do
             case 4:
                 if(opcion3==1){
                 printf("Eligio opcion 4. Los resultados son los siguientes:\n");
-                printf("   a) Resultado de la suma de los operandos es: %d\n", suma);
-                printf("   b) Resultado de la resta de los operandos es: %d\n", resta);
+                printf("   a) Resultado de la suma de los operandos es: %f\n", suma);
+                printf("   b) Resultado de la resta de los operandos es: %f\n", resta);
                 printf("   c) El cociente de la division es: %f\n", cociente);
-                printf("   d) El producto de la multiplicacion es: %d\n", producto);
+                printf("   d) El producto de la multiplicacion es: %lf\n", producto);
                 printf("   e) El factorial del primer operando es: %lld y el factorial del segundo es %lld\n", factor,factor2);}
                 else{
                     printf("No ha seleccionado la opcion para hacer los calculos");}
