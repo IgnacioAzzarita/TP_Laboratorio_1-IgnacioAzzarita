@@ -18,14 +18,13 @@
         return producto;}
     float Division(float dividendo,float divisor){
         if(divisor==0){
-        printf("No se puede dividir por 0. Elija otro valor:");
-        scanf("%f",&divisor);}
+        printf("No se puede dividir por 0. Elija otro valor:");}
         float cociente;
         cociente=dividendo/divisor;
         return cociente;}
-float Factorial(float primerOperando){
-    float resultado;
-    float i;
+long long int Factorial(long long int primerOperando){
+    long long int resultado;
+    int i;
     resultado= 1;
     for(i = 1; i <= primerOperando; i++){
         resultado *= i;}

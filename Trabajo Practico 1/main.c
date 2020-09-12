@@ -43,8 +43,8 @@ int main(){
  int resta;
  int producto;
  float cociente;
- float factor;
- float factor2;
+ long long int factor;
+ long long int factor2;
  opcion1=0;
  opcion2=0;
  opcion3=0;
@@ -52,7 +52,7 @@ int main(){
  continuar='s';
 
 
-          printf("------------Menu de opciones------------");
+    printf("------------Menu de opciones------------");
     printf("\n1. Ingresar 1er operando:\n");
     printf("2. Ingresar 2do operando:\n");
     printf("3. Calcular todas las operaciones: \n");
@@ -103,7 +103,7 @@ do
                 printf("   b) Resultado de la resta de los operandos es: %d\n", resta);
                 printf("   c) El cociente de la division es: %f\n", cociente);
                 printf("   d) El producto de la multiplicacion es: %d\n", producto);
-                printf("   e) El factorial del primer operando es: %f y el factorial del segundo es %f\n", factor,factor2);}
+                printf("   e) El factorial del primer operando es: %lld y el factorial del segundo es %lld\n", factor,factor2);}
                 else{
                     printf("No ha seleccionado la opcion para hacer los calculos");}
                 break;
