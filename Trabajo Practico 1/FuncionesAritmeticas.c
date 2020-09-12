@@ -2,7 +2,8 @@
  int ObtengoNumero(){
      int numero;
      printf("Ingrese el numero deseado");
-     scanf("%d",&numero);}
+     scanf("%d",&numero);
+     return numero;}
  int Suma(int numero1,int numero2){
         int resultado;
         resultado=numero1+numero2;
@@ -22,7 +23,7 @@
         float cociente;
         cociente=dividendo/divisor;
         return cociente;}
-float Factorial(int primerOperando){
+float Factorial(float primerOperando){
     float resultado;
     float i;
     resultado= 1;

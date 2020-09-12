@@ -43,7 +43,8 @@ int main(){
  int resta;
  int producto;
  float cociente;
-float factor;
+ float factor;
+ float factor2;
  opcion1=0;
  opcion2=0;
  opcion3=0;
@@ -65,7 +66,7 @@ float factor;
 
 do
     {
-         system("pause");
+
          printf("Ingrese la opcion deseada");
          scanf("%d",&opcion);
         switch(opcion)
@@ -77,8 +78,7 @@ do
             case 2:
                 if(opcion1==1){
                 segundoOperando=ObtengoNumero();
-                opcion2=1;
-                scanf("%d",&segundoOperando);}
+                opcion2=1;}
                 else {
                         printf("\nDeberias haber ingresado el primer operando\n");}
                         break;
@@ -90,11 +90,12 @@ do
                 resta=Resta(primerOperando,segundoOperando);
                 producto=Multiplicacion(primerOperando,segundoOperando);
                 cociente=Division(primerOperando,segundoOperando);
-                factor=Factorial(primerOperando);}
+                factor=Factorial(primerOperando);
+                factor2=Factorial(segundoOperando);}
                 else{
                     printf("\nImposible hacer los calculos ya que falta ingresar operandos!\n");}
                     break;
-                    system("pause");
+
             case 4:
                 if(opcion3==1){
                 printf("Eligio opcion 4. Los resultados son los siguientes:\n");
@@ -102,11 +103,11 @@ do
                 printf("   b) Resultado de la resta de los operandos es: %d\n", resta);
                 printf("   c) El cociente de la division es: %f\n", cociente);
                 printf("   d) El producto de la multiplicacion es: %d\n", producto);
-                printf("   e) El factorial del primer operando es: %f\n", factor);}
+                printf("   e) El factorial del primer operando es: %f y el factorial del segundo es %f\n", factor,factor2);}
                 else{
                     printf("No ha seleccionado la opcion para hacer los calculos");}
                 break;
-                system("pause");
+
             case 5:
                 printf("\nGracias por usar el programa! Hasta luego!\n");
                 continuar='t';
